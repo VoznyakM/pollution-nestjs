@@ -1,16 +1,19 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Stats } from './stats.enitity';
+import { StatsRepository } from './stats.repository';
 
 @Injectable()
 export class StatsService {
 
-  // constructor(
-  //   @InjectRepository(StatsRepository)
-  //   private taskRepository: StatsRepository
-  // ) {}
+  constructor(
+     @InjectRepository(StatsRepository)
+     private statsRepository: StatsRepository
+  ) {}
 
-  async getStats(): Promise<any> {
-    // return this.statsRepository.getTasks(filterDto, user);
-    return await {"infected": 147}
+  async getStats(): Promise<Stats[]> {
+    return this.statsRepository.getStats();
+    //return await {"infected": 147}
   }
 
 }
