@@ -8,9 +8,9 @@ export class StatsService {
   //   private taskRepository: StatsRepository
   // ) {}
 
-  async getStats(): Promise<Task[]> {
+  async getStats(): Promise<any> {
     // return this.statsRepository.getTasks(filterDto, user);
-    return await json_encode("infected" => 145)
+    return await {"infected": 147}
   }
 
 }
