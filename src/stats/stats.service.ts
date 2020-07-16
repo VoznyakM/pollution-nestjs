@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Stats } from './stats.enitity';
+import { Stats } from './stats.entity';
 import { StatsRepository } from './stats.repository';
 
 @Injectable()
@@ -13,7 +13,6 @@ export class StatsService {
 
   async getStats(): Promise<Stats[]> {
     return this.statsRepository.getStats();
-    //return await {"infected": 147}
   }
 
 }

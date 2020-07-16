@@ -5,7 +5,7 @@ export class Stats extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column('date')
   date: Date;
 
   @Column()
