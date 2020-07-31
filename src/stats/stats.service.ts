@@ -34,6 +34,8 @@ export class StatsService {
   async updateStats(date: Date, updateStatsDto: UpdateStatsDto): Promise<Stats> {
     const stats = await this.getStatsByDate(date);
     stats.cases = updateStatsDto.cases;
+    stats.deaths = updateStatsDto.deaths;
+    stats.recovered = updateStatsDto.recovered;
     await stats.save();
     return stats;
   }
