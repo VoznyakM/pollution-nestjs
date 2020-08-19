@@ -5,3 +5,7 @@ db:
   username: 'root'
   password: ''
   database: 'covid'
+
+app:
+  port: 3000
+  
