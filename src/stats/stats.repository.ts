@@ -19,6 +19,8 @@ export class StatsRepository extends Repository<Stats> {
     stats.cases = cases;
     stats.deaths = deaths;
     stats.recovered = recovered;
+    stats.created_at = date; // new Date(); @todo nodejs bug
+    stats.updated_at = date; // new Date();
     await stats.save();
 
     return stats;
