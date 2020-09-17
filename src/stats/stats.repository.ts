@@ -5,8 +5,10 @@ import { Stats } from './stats.entity';
 @EntityRepository(Stats)
 export class StatsRepository extends Repository<Stats> {
   async getStats(): Promise<Stats[]> {
-    const query = this.createQueryBuilder('stats');
-    query.where('stats.date = :date', { date: new Date().toISOString().split('T')[0] })
+    const query = this.createQueryBuilder('stats')
+    // query.where('stats.date = :date', { date: new Date().toISOString().split('T')[0] })
+    .addOrderBy("date", "DESC")
+    .limit(60);
     const stats = await query.getMany();
     return stats;
   }
@@ -19,8 +21,6 @@ export class StatsRepository extends Repository<Stats> {
     stats.cases = cases;
     stats.deaths = deaths;
     stats.recovered = recovered;
-    stats.created_at = date; // new Date(); @todo nodejs bug
-    stats.updated_at = date; // new Date();
     await stats.save();
 
     return stats;

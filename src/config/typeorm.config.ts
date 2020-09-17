@@ -10,6 +10,9 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   password: process.env.RDS_PASSWORD || dbConfig.password,
   database: process.env.RDS_DB_NAME || dbConfig.database,
   port: process.env.RDS_PORT || dbConfig.port,
+  "extra": {
+    charset: "utf8mb4_unicode_ci"
+  },
   entities: [
     __dirname + '/../**/**.entity.{js,ts}',
   ],

@@ -10,6 +10,15 @@ NestJS driven backend to manage COVID stats
 $ npm install
 ```
 
+## DB setup
+
+setup correct encoding
+
+```SQL
+ALTER DATABASE covid CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+ALTER TABLE covid CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+
 ## Running the app
 
 ```bash

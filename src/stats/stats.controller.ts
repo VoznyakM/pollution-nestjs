@@ -13,6 +13,13 @@ export class StatsController {
     return this.statsService.getStats();
   }
 
+  @Get('/:date')
+  getStats(
+    @Param('date') date: Date
+  ) {
+    return this.statsService.getStatsByDate(date);    
+  }
+
   @Post()
   @UsePipes(ValidationPipe)
   createStats(

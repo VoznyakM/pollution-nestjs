@@ -18,7 +18,8 @@ export class StatsService {
   }
 
   async getStatsByDate(date: Date): Promise<Stats> {
-    const found = await this.statsRepository.findOne({ where: { date } });
+    // const dateStr = date.toISOString().split('T')[0];
+    const found = await this.statsRepository.findOne({ where: { date } }); // : dateStr
 
     if (!found) {
       throw new NotFoundException();
