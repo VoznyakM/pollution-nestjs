@@ -14,7 +14,7 @@ export class Sanitizer extends BaseEntity {
 
   @Column("float")
   lng: number;
-
+  /*
   @CreateDateColumn()
   @Column({ type: 'datetime', default: '0000-00-00' })
   created_at: Date;
@@ -22,5 +22,5 @@ export class Sanitizer extends BaseEntity {
   @UpdateDateColumn({ default: Date.now() })
   @Column({ type: 'datetime', default: '0000-00-00' })
   updated_at: Date;
-
+  */
 }

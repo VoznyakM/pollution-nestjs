@@ -26,7 +26,7 @@ export class Area extends BaseEntity {
 
   @Column({default: '0'})
   probability: number;
-
+  /*
   @CreateDateColumn()
   @Column({ type: 'datetime', default: '0000-00-00' })
   created_at: Date;
@@ -34,5 +34,5 @@ export class Area extends BaseEntity {
   @UpdateDateColumn({ default: Date.now() })
   @Column({ type: 'datetime', default: '0000-00-00' })
   updated_at: Date;
-
+  */
 }

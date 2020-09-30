@@ -7,9 +7,9 @@ export class Setting extends BaseEntity {
   @PrimaryColumn()
   name: string;
 
-  @Column({ type: 'text', default: ''})
+  @Column({ type: 'text'})
   value: string;
-
+  /*
   @CreateDateColumn()
   @Column({ type: 'datetime', default: '0000-00-00' })
   created_at: Date;
@@ -17,5 +17,5 @@ export class Setting extends BaseEntity {
   @UpdateDateColumn({ default: Date.now() })
   @Column({ type: 'datetime', default: '0000-00-00' })
   updated_at: Date;
-
+  */
 }

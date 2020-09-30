@@ -20,7 +20,7 @@ export class Stats extends BaseEntity {
 
   @Column({'default': 0})
   is_projection: boolean;
-
+  /*
   @CreateDateColumn()
   @Column({ type: 'datetime', default: '0000-00-00' })
   created_at: Date;
@@ -28,5 +28,5 @@ export class Stats extends BaseEntity {
   @UpdateDateColumn()
   @Column({ type: 'datetime', default: '0000-00-00' })
   updated_at: Date;
-
+  */
 }
