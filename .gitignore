@@ -35,3 +35,4 @@ lerna-debug.log*
 
 # Mine
 config/default.yml
+nohup.out
