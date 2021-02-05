@@ -1,8 +1,8 @@
-* CovidNest
+* WildfireNest
 
 ## Description
 
-NestJS driven backend to manage COVID stats
+NestJS driven backend to manage Wildfire project
 
 ## Installation
 
@@ -15,8 +15,8 @@ $ npm install
 setup correct encoding
 
 ```SQL
-ALTER DATABASE covid CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-ALTER TABLE covid CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+ALTER DATABASE wildfire CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+ALTER TABLE wildfire CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 ```
 
 ## Running the app
@@ -47,11 +47,11 @@ $ npm run test:cov
 
 ## Support
 
-CovidNest is an GPL-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. 
+WildfireNest is an GPL-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. 
 
 ## Stay in touch
 
 
 ## License
 
-  CovidNest is [GPL licensed](LICENSE).
+  WildfireNest is [GPL licensed](LICENSE).
