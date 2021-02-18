@@ -3,8 +3,8 @@ db:
   port: 3306
   host: 'localhost'
   username: 'root'
-  password: 'QxjVn4BGV4742020'
-  database: 'covid'
+  password: ''
+  database: 'pollution'
 
 app:
   port: 3000
