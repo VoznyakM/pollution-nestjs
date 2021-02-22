@@ -2,10 +2,10 @@ import { IsNotEmpty } from 'class-validator';
 
 export class CreateAreaDto {
 
-  @IsNotEmpty()
+  // @IsNotEmpty()
   title: string;
 
-  @IsNotEmpty()
+  // @IsNotEmpty()
   region: string;
 
   @IsNotEmpty()
@@ -14,7 +14,15 @@ export class CreateAreaDto {
   @IsNotEmpty()
   lng: number;
 
-  @IsNotEmpty()
+  // @IsNotEmpty()
   radius: number;
 
+  @IsNotEmpty()
+  description: string;
+
+  @IsNotEmpty()
+  address: string;
+
+  @IsNotEmpty()
+  level: number;  
 }

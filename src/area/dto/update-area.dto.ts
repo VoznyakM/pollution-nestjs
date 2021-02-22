@@ -1,10 +1,10 @@
 import { IsNotEmpty } from 'class-validator';
 
 export class UpdateAreaDto {
-  @IsNotEmpty()
+  // @IsNotEmpty()
   title: string;
 
-  @IsNotEmpty()
+  // @IsNotEmpty()
   region: string;
 
   @IsNotEmpty()
@@ -13,6 +13,15 @@ export class UpdateAreaDto {
   @IsNotEmpty()
   lng: number;
 
-  @IsNotEmpty()
+  // @IsNotEmpty()
   radius: number;
+
+  @IsNotEmpty()
+  description: string;
+
+  @IsNotEmpty()
+  address: string;
+
+  @IsNotEmpty()
+  level: number;  
 }

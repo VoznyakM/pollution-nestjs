@@ -9,12 +9,12 @@ export class CreateReportDto {
   address: string;
 
   @IsNotEmpty()
+  level: number;
+
+  @IsNotEmpty()
   lat: number;
 
   @IsNotEmpty()
   lng: number;
-
-  @IsNotEmpty()
-  level: number;
 
 }

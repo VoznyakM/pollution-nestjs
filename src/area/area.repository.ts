@@ -12,13 +12,16 @@ export class AreaRepository extends Repository<Area> {
   }
 
   async createArea(createAreaDto: CreateAreaDto): Promise<Area> {
-    const { title, region, lat, lng, radius } = createAreaDto;
+    const { title, region, lat, lng, radius, description, address, level } = createAreaDto;
     const area = new Area();
     area.title = title;
     area.region = region;
     area.lat = lat;
-    area.lng = lng;
-    area.radius = radius;
+    area.lng = lng; 
+    area.description = description;
+    area.address = address;
+    area.level = level;
+    area.radius = 50; // radius ? radius : 50;
     await area.save();
 
     return area;

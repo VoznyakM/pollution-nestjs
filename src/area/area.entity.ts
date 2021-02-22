@@ -24,9 +24,24 @@ export class Area extends BaseEntity {
   @Column({default: 'ff0000'})
   color: string;
 
+  @Column({default: ''})
+  description: string;
+
+  @Column({default: ''})
+  address: string;
+
+  @Column()
+  phone: number;
+
+  @Column()
+  level: number;
+
+  @Column()
+  status_id: number;
+  
   @Column({default: '0'})
   probability: number;
-  /*
+    
   @CreateDateColumn()
   @Column({ type: 'datetime', default: '0000-00-00' })
   created_at: Date;
@@ -34,5 +49,4 @@ export class Area extends BaseEntity {
   @UpdateDateColumn({ default: Date.now() })
   @Column({ type: 'datetime', default: '0000-00-00' })
   updated_at: Date;
-  */
 }
