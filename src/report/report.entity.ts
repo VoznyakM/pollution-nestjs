@@ -7,6 +7,15 @@ export class Report extends BaseEntity {
   id: number;
 
   @Column({default: ''})
+  source: string;
+
+  @Column({default: ''})
+  author: string;
+
+  @Column({default: ''})
+  avatar: string;
+
+  @Column({default: ''})
   description: string;
 
   @Column({default: ''})
@@ -17,12 +26,6 @@ export class Report extends BaseEntity {
 
   @Column("float")
   lng: number;
-
-  @Column()
-  phone: number;
-
-  @Column()
-  level: number;
 
   @Column()
   status_id: number;

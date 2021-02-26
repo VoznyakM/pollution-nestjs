@@ -30,8 +30,8 @@ export class Area extends BaseEntity {
   @Column({default: ''})
   address: string;
 
-  @Column()
-  phone: number;
+  @Column({default: ''})
+  phone: string;
 
   @Column()
   level: number;
