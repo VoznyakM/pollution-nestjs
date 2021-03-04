@@ -7,6 +7,9 @@ export class Report extends BaseEntity {
   id: number;
 
   @Column({default: ''})
+  id_str: string;
+
+  @Column({default: ''})
   source: string;
 
   @Column({default: ''})
@@ -29,6 +32,9 @@ export class Report extends BaseEntity {
 
   @Column()
   status_id: number;
+
+  @Column({ type: 'datetime', default: '0000-00-00' })
+  orig_date: Date;
   
   @CreateDateColumn()
   @Column({ type: 'datetime', default: '0000-00-00' })

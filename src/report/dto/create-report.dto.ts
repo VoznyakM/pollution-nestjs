@@ -5,16 +5,13 @@ export class CreateReportDto {
   @IsNotEmpty()
   description: string;
 
-  @IsNotEmpty()
   address: string;
-
-  @IsNotEmpty()
-  level: number;
-
-  @IsNotEmpty()
+  id_str: string;
+  source: string;
+  avatar: string;
+  author: string;
+  orig_date: Date;
   lat: number;
-
-  @IsNotEmpty()
   lng: number;
 
 }

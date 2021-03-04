@@ -16,15 +16,20 @@ export class ReportRepository extends Repository<Report> {
   }
 
   async createReport(createReportDto: CreateReportDto): Promise<Report> {
-    const { description, address, lat, lng, level } = createReportDto;
+    const { orig_date, id_str, source, description, address, avatar, author, lat, lng } = createReportDto;
     const report = new Report();
     report.description = description;
     report.address = address;
     report.lat = lat;
     report.lng = lng;
-    report.level = level;
+    report.avatar = avatar;
+    report.author = author;
+    report.orig_date = orig_date;
+    report.id_str = id_str;
+    report.source = source;
     await report.save();
 
+/*
     var createAreaDto = new CreateAreaDto;
     createAreaDto.title = address;
     createAreaDto.lat = lat;
@@ -32,6 +37,7 @@ export class ReportRepository extends Repository<Report> {
     createAreaDto.radius = 50;
     var areaRepository = new AreaRepository;
     areaRepository.createArea(createAreaDto);
+*/
 
     return report;
   } 

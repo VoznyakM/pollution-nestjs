@@ -36,7 +36,6 @@ export class ReportService {
     report.description = updateReportDto.description;
     report.lat = updateReportDto.lat;
     report.lng = updateReportDto.lng;
-    report.level = updateReportDto.level;
     await report.save();
     return report;
   }
