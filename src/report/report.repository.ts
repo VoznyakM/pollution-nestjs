@@ -11,7 +11,7 @@ export class ReportRepository extends Repository<Report> {
   async getReport(): Promise<Report[]> {
     const query = this.createQueryBuilder('Report');
     // query.where('Report.date = :date', { date: new Date().toISOString().split('T')[0] })
-    const report = await query.getMany();
+    const report = await query.orderBy('orig_date', 'DESC').getMany();
     return report;
   }
 
