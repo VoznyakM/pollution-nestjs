@@ -13,11 +13,11 @@ export class AreaController {
     return this.areaService.getAreas();
   }
 
-  @Get('/:region')
+  @Get('/:id')
   getArea(
-    @Param('region') region: string
+    @Param('id') id: number
   ) {
-    return this.areaService.getArea(region);    
+    return this.areaService.getArea(id);    
   }
 
   @Post()
@@ -28,13 +28,12 @@ export class AreaController {
     return this.areaService.createArea(createAreaDto);
   }
 
-
-  @Patch('/:region')
+  @Patch('/:id')
   updateArea(
-    @Param('region') region: string, 
+    @Param('id') id: number, 
     @Body() updateAreaDto: UpdateAreaDto,
   ): Promise<Area> {
-    return this.areaService.updateArea(region, updateAreaDto);
+    return this.areaService.updateArea(id, updateAreaDto);
   }
 
 }

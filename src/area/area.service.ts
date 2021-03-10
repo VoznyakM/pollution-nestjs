@@ -17,8 +17,8 @@ export class AreaService {
     return this.areaRepository.getArea();
   }
 
-  async getArea(region: string): Promise<Area> {
-    const found = await this.areaRepository.findOne({ where: { region } }); 
+  async getArea(id: number): Promise<Area> {
+    const found = await this.areaRepository.findOne(id); 
     
     if (!found) {
       throw new NotFoundException();
@@ -31,8 +31,8 @@ export class AreaService {
     return this.areaRepository.createArea(createAreaDto);
   }
 
-  async updateArea(region: string, updateAreaDto: UpdateAreaDto): Promise<Area> {
-    const area = await this.getArea(region);
+  async updateArea(id: number, updateAreaDto: UpdateAreaDto): Promise<Area> {
+    const area = await this.getArea(id);
     area.title = updateAreaDto.title;
     area.lat = updateAreaDto.lat;
     area.lng = updateAreaDto.lng;
