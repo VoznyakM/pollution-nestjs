@@ -23,6 +23,8 @@ export class CreateAreaDto {
   @IsNotEmpty()
   address: string;
 
+  phone: string;
+
   @IsNotEmpty()
   level: number;  
 }

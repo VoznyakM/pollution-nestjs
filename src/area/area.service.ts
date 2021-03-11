@@ -36,6 +36,10 @@ export class AreaService {
     area.title = updateAreaDto.title;
     area.lat = updateAreaDto.lat;
     area.lng = updateAreaDto.lng;
+    area.description = updateAreaDto.description;
+    area.address = updateAreaDto.address;
+    area.phone = updateAreaDto.phone;
+    area.level = updateAreaDto.level;
     area.radius = updateAreaDto.radius;
     await area.save();
     return area;
