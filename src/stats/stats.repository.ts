@@ -8,7 +8,7 @@ export class StatsRepository extends Repository<Stats> {
     const query = this.createQueryBuilder('stats')
     // query.where('stats.date = :date', { date: new Date().toISOString().split('T')[0] })
     .addOrderBy("date", "DESC")
-    .limit(60);
+    .limit(10);
     const stats = await query.getMany();
     return stats;
   }
